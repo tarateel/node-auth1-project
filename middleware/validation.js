@@ -19,7 +19,7 @@ function restricted() {
 
       const passwordValid = await bcrypt.compare(password, user.password)
       if (!passwordValid) {
-        return res.status(401).json(euthError)
+        return res.status(401).json(authError)
       }
 
       next()
