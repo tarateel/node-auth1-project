@@ -13,7 +13,7 @@ server.use(morgan('dev'))
 server.use(express.json())
 
 server.use("/auth", authRouter)
-server.use("/users", usersRouter)
+server.use("/api/users", usersRouter)
 
 server.get("/", (req, res, next) => {
   res.json({

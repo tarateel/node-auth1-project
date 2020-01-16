@@ -1,6 +1,4 @@
-const users = require('../database/db-config');
-const db = require('../database/db-config');
-const Users = require('../users/users-model');
+const Users = require('../database/db-config');
 
 function restricted() {
   const authError = {
@@ -29,7 +27,7 @@ function restricted() {
     } catch (err) {
       next(err)
     }
-  };
+  }
 };
 
 module.exports = {
