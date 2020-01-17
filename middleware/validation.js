@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const Users = require('../users/users-model');
 
 function restricted() {
@@ -7,7 +8,7 @@ function restricted() {
 
   return async (req, res, next) => {
     try {
-      const { username, password } = req.body
+      const { username, password } = req.headers
       if (!username || !password) {
         return res.status(401).json(authError)
       }
