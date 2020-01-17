@@ -1,4 +1,4 @@
-const Users = require('../database/db-config');
+const Users = require('../users/users-model');
 
 function restricted() {
   const authError = {

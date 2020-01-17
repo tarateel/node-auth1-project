@@ -5,7 +5,7 @@ const { restricted } = require('../middleware/validation');
 
 const router = express.Router();
 
-router.get('/', restricted, async (req, res, next) => {
+router.get('/', restricted(), async (req, res, next) => {
   try {
     const users = await Users.find()
 
